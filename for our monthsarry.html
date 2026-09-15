@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Monthsary, Baby! ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- PIN LOCK SCREEN -->
+<div id="pinScreen" class="pin-screen">
+
+    <div class="pin-box">
+
+        <div class="lock-icon">🔐</div>
+
+        <h1>Open mo kung alam mo</h1>
+
+        <p>Enter the secret PIN to continue ♡</p>
+
+        <input
+            type="password"
+            id="pinInput"
+            maxlength="4"
+            inputmode="numeric"
+            placeholder=" "
+            onkeydown="if(event.key === 'Enter') checkPIN()"
+        >
+
+        <button onclick="checkPIN()">Open ♡</button>
+
+        <p id="pinError" class="pin-error"></p>
+
+    </div>
+
+</div>
+
+    <!-- Falling petals -->
+    <div id="petals"></div>
+
+
+    <!-- =========================
+         PAGE 1
+    ========================== -->
+
+    <section class="page home" id="home">
+
+        <div class="background"></div>
+
+        <div class="content">
+
+            <p class="small-text">
+                A little surprise made especially for you ♡
+            </p>
+
+            <h1>
+                Happy Monthsary, Baby!
+            </h1>
+
+            <p class="subtitle">
+                Another beautiful month with you. 🤍
+            </p>
+
+            <button class="continue-btn" onclick="goTo('gift')">
+                Continue
+                <br>
+                🌸
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 2 - GIFT
+    ========================== -->
+
+    <section class="page gift-page" id="gift">
+
+        <div class="content">
+
+            <h2>
+                A Little Gift For You
+            </h2>
+
+            <div class="gift" onclick="openGift()">
+
+                <div class="bow">
+                    🎀
+                </div>
+
+                <div class="gift-lid"></div>
+
+                <div class="gift-box">
+
+                    <div class="ribbon"></div>
+
+                </div>
+
+            </div>
+
+            <p id="giftMessage">
+                Click the gift ♡
+            </p>
+
+            <button class="continue-btn" onclick="goTo('choices')">
+                Continue
+                <br>
+                🌸
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 3 - CHOICES
+    ========================== -->
+
+    <section class="page choices-page" id="choices">
+
+        <div class="content">
+
+            <h2>
+                Happy Monthsary, Baby!
+            </h2>
+
+            <p class="choose-text">
+                Choose something for us ♡
+            </p>
+
+
+            <div class="choices">
+
+                <button class="choice" onclick="goTo('flowers')">
+
+                    <div class="choice-icon">
+                        🌸
+                    </div>
+
+                    <span>
+                        Flowers for you
+                    </span>
+
+                </button>
+
+
+                <button class="choice" onclick="goTo('memories')">
+
+                    <div class="choice-icon">
+                        📸
+                    </div>
+
+                    <span>
+                        A Piece of Us
+                    </span>
+
+                </button>
+
+
+                <button class="choice" onclick="goTo('letter')">
+
+                    <div class="choice-icon">
+                        💌
+                    </div>
+
+                    <span>
+                        Letter Just for You
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 4 - LILY BOUQUET
+    ========================== -->
+
+    <section id="flowers" class="page flowers-page">
+
+    <div class="flower-content">
+
+        <p class="small-title">A little something for you 🌷</p>
+
+        <h1>Flowers for You</h1>
+
+        <p class="flower-message">
+            Just like these flowers, I hope our memories continue
+            to bloom beautifully with every month that passes.
+        </p>
+
+        <!-- YOUR BOUQUET -->
+        <div class="bouquet-container">
+            <img src="boquet.png" alt="Beautiful lily bouquet" class="bouquet-image">
+        </div>
+
+        <button class="next-btn" onclick="goTo('choices')">
+            go back ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+
+    <!-- =========================
+         PAGE 5 - OUR PHOTOS
+    ========================== -->
+
+    <section class="page memories-page" id="memories">
+
+        <div class="content">
+
+            <h2>
+                A Piece of Us
+            </h2>
+
+            <p class="memory-subtitle">
+                Little moments that became beautiful memories. ♡
+            </p>
+
+
+            <div class="photo-grid">
+
+
+                <!-- PHOTO 1 -->
+
+                <div class="photo-frame">
+
+                    <img src="PIC1.png" alt="Our memory">
+
+                </div>
+
+
+                <!-- PHOTO 2 -->
+
+                <div class="photo-frame">
+
+                    <img src="pic2.png" alt="Our memory">
+
+                </div>
+
+
+                <!-- PHOTO 3 -->
+
+                <div class="photo-frame">
+
+                    <img src="pic3.png" alt="Our memory">
+
+                </div>
+
+
+                <!-- PHOTO 4 -->
+
+                <div class="photo-frame">
+
+                    <img src="pic4.png" alt="Our memory">
+
+                </div>
+
+
+                <!-- PHOTO 5 -->
+
+                <div class="photo-frame">
+
+                    <img src="pic7.png" alt="Our memory">
+
+                </div>
+
+
+                <!-- PHOTO 6 -->
+
+                <div class="photo-frame">
+
+                    <img src="pic6.png" alt="Our memory">
+
+                </div>
+
+            </div>
+
+
+            <button class="continue-btn" onclick="goTo('choices')">
+                go back
+                <br>
+                🌸
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 6 - LETTER
+    ========================== -->
+
+    <section class="page letter-page" id="letter">
+
+        <div class="content">
+
+            <h2>
+                Happy Monthsary, Baby!
+            </h2>
+
+
+            <div class="letter">
+
+                <p>
+                    Another month with you, and I'm honestly grateful that despite everything we've been through,
+                     we’re still here—still together, still trying, and still choosing each other.
+                </p>
+
+                <p>
+                    We’ve faced challenges along the way. There were moments when things weren’t easy, when misunderstandings, problems, and difficult situations
+                    made us question things. We’ve had our ups and downs, and I know that our relationship isn’t always going to be perfect.
+                    But through all of those moments, one thing I’m thankful for is that we never completely gave up on us.
+                </p>
+
+                <p>
+                   We may not always know what to do or say when problems come, but somehow, we still find our way back to each other. And I think
+                     that’s what makes what we have special. It’s not about having a perfect relationship with no problems. It’s about having someone 
+                    who is willing to stay, understand, communicate, and keep trying even when things get difficult.
+                </p>
+
+                <p>
+                    Thank you for staying with me through the good days and the difficult ones. Thank you for being patient with me,
+                     for understanding me, and for continuing to choose us even when things don’t go the way we want them to.
+                </p>
+
+                <p>
+                   I know there will still be challenges ahead of us, but I hope that no matter what happens, we continue to face them together.
+                    I want us to keep growing, learning, and becoming better for each other. I want to keep making memories with you, even through
+                     the simple and ordinary days.
+                </p>
+                
+                <p>
+                    If I had to choose again, I would still choose you. And if tomorrow gives us another reason to give up,
+                     I hope we remember all the reasons we chose to stay.
+                </p>
+
+                <p>
+                    Happy monthsary to us. 🤍
+                    Here’s to another month of choosing each other, fighting for what we have, and loving each other through everything.
+                     I’m grateful for you, and I’m grateful for us. 
+                </p>
+
+                <div class="signature">
+                    Happy Monthsary, Baby! ♡
+                </div>
+
+            </div>
+
+
+            <button class="restart-btn" onclick="goTo('home')">
+                ↻ Start Again
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
